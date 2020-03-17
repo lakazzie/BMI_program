@@ -8,9 +8,7 @@ int main(int argc, char **argv)
 {
 	if (argc == 3)
 	{
-		float height;
-		float weight;
-		float bmi = BMI(atof(weight), atof(height));
+		float bmi = BMI(atof(argv[1]), atof(argv[2]));
 		printf("%.2f", bmi);
 	}
 	else 
