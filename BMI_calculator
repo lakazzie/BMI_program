@@ -1,20 +1,19 @@
-#include <unistd.h>
-
-void ft_putchar (char c)
-{
-	write(1, &c, 1)
-}
-
+#include <stdio.h>
+#include <stdlib.h>
 float BMI (float height, float weight)
 {
 	return height/weight*2;
 }
-int main()
+int main(int argc, char **argv)
 {
-	float height = 1.65;
-	float weight = 70;
-	float bmi = BMI(weight, height);
-
-ft_putchar (%.2f, bmi);
-return 0;
+	if (argc == 3)
+	{
+		float bmi = BMI(atof(argv[1]), atof(argv[2]));
+		printf("%.2f", bmi);
+	}
+	else 
+	{
+		printf("\n");
+	}
+	return (0);
 }
